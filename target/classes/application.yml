@@ -1,0 +1,30 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.22:8761/eureka/
+      
+server:
+  port: 8770
+  
+spring:
+  application:
+    name: greeting-product-service
+  datasource: 
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://192.168.1.20:3306/eshop
+    username: root
+    password: root
+    
+  rabbitmq:  
+       host: 192.168.1.20 
+       port: 5672 
+       username: rabbitadmin   
+       password: 123456 
+    
+mybatis: 
+  configuration: 
+    mapUnderscoreToCamelCase: true
+logging: 
+    level: 
+      com.roncoo.eshop.product.mapper: debug
